@@ -12,7 +12,7 @@
   <!-- Unknown Amount of Elements -->
   <script>
     function addItem() {
-      const unknown = document.querySelector('.unknown');
+     const unknown = document.querySelector('.unknown');
       unknown.innerHTML += `<div class="item">${unknown.childElementCount}</div>`;
     }
   </script>
@@ -24,7 +24,11 @@
   </div>
 
   <style>
-    .unknown {}
+    .unknown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /*fills until it has enough space and then wraps to next row if space exceeds*/
+      grid-gap: 20px;
+    }
   </style>
 </body>
 
