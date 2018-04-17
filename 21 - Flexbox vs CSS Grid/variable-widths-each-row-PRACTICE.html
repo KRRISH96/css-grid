@@ -21,10 +21,15 @@
     <div class="item">Short</div>
   </div>
   <style>
-    .flex-container {}
+  /*grid cant do this*/
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .flex-container>* {
       margin: 10px;
+      flex: 1;
     }
   </style>
 </body>
